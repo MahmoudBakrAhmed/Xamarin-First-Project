@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Dubie"
+             x:Class="Dubie.MainPage"
+             BackgroundImage="main.jpg">
+    <Grid>
+
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Center" RowSpacing="-10" ColumnSpacing="-8" Margin="0,-30,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1.2*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="MyLocationButton" Grid.Column="0" Grid.Row="0" Text="My Locations" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="100" BackgroundColor="#00b3fe" TextColor="White" BorderRadius="0" FontSize="22" Image="MyLocation.png" ContentLayout="left,3" FontFamily="{StaticResource LightFont}" Clicked="MyLocationButtonFunction"></Button>
+            <Button x:Name="MyRequestsButton" Grid.Column="1" Grid.Row="0" Text="My Requests" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="100" BackgroundColor="#73cbfd" TextColor="White" BorderRadius="0" FontSize="22" Image="MyRequests.png" ContentLayout="left,3" FontFamily="{StaticResource LightFont}"></Button>
+            <Button x:Name="ServicesIncidentsButton" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Text="Services and Incidents" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="120" BackgroundColor="#145b9b" TextColor="White" BorderRadius="0" FontSize="Large" Image="ServicesIncidents.png" ContentLayout="left,-3" FontFamily="{StaticResource LightFont}"></Button>
+            <Button x:Name="MyProfileButton" Grid.Column="0" Grid.Row="2" Text="My Profile" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="100" BackgroundColor="#01add3" TextColor="White" BorderRadius="0" FontSize="22" Image="MyProfile.png" ContentLayout="left,3" FontFamily="{StaticResource LightFont}"></Button>
+            <Button x:Name="MyTransactionsButton" Grid.Column="1" Grid.Row="2" Text="My Transactions" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="100" BackgroundColor="#1ddbf5" TextColor="White" BorderRadius="0" FontSize="22" Image="MyTransactions.png" ContentLayout="left,3" FontFamily="{StaticResource LightFont}"></Button>
+        </Grid>
+        <Grid x:Name="SplashGrid">
+            <Image x:Name="Logo" Source="DMlOGO.png" HorizontalOptions="Center" VerticalOptions="Center">
+                <Image.TranslationY>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS">0</On>
+                        <On Platform="Android">-12</On>
+                    </OnPlatform>
+                </Image.TranslationY>
+            </Image>
+        </Grid>
+    </Grid>
+</ContentPage>
