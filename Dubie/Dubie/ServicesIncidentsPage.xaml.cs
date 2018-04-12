@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Dubie
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SevicesIncidentsPage : ContentPage
+	public partial class ServicesIncidentsPage : ContentPage
 	{
-		public SevicesIncidentsPage ()
+		public ServicesIncidentsPage ()
 		{
 			InitializeComponent ();
 		}

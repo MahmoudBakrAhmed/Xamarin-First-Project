@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dubie.ServicesIncidentsPage"
+             xmlns:custom="clr-namespace:Dubie"
+             FlowDirection="RightToLeft">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="style.css" />
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <!--<ToolbarItem Name="MenuItem1" Order="Primary" Icon="BarLogo.png"  Priority="0" />-->
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="notification.png" Priority="0" />
+        <ToolbarItem Name="MenuItem2" Order="Primary" Icon="DMlOGO.png" Priority="0" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentView ControlTemplate="{StaticResource MainPageTemplate}">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <Label Text="HOW CAN YOU HELP?" TextColor="#0b8cac" FontSize="30" FontFamily="{StaticResource RegularFont}" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <Label Text="SELECT A CATEGORY TO START" TextColor="#424242" FontSize="18"  FontFamily="{StaticResource RegularFont}" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+                <ScrollView BackgroundColor="Black" Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid RowSpacing="0" ColumnSpacing="1" BackgroundColor="White" Padding="3,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="125" />
+                            <RowDefinition Height="125" />
+                            <RowDefinition Height="125" />
+                            <RowDefinition Height="125" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <custom:HomeButton Grid.Column="0" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#000650" TextColor="White" BorderRadius="0" FontSize="18" FontFamily="{StaticResource RegularFont}" ContentLayout="top,-18" Image="CommonServices.png" Text="Common Services and Incidents"></custom:HomeButton>
+                        <Button Grid.Column="1" Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#0e213f" TextColor="White" BorderRadius="0" FontSize="18" FontFamily="{StaticResource RegularFont}" ContentLayout="top,-18" Image="EmergencyPublicArea.png" Text="Emergency Public Area and Utilites"></Button>
+                        <Button Grid.Column="0" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#003466" TextColor="White" BorderRadius="0" FontSize="18" FontFamily="{StaticResource RegularFont}" ContentLayout="top,-18" Image="CleanlinessWaste.png" Text="Cleanliness and Waste"></Button>
+                        <Button Grid.Column="1" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#0944d0" TextColor="White" BorderRadius="0" FontSize="18" FontFamily="{StaticResource RegularFont}" ContentLayout="top,-18" Image="DisastersRain.png" Text="Disasters, Rain and Sanitation"></Button>
+                        <Button Grid.Column="0" Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#12aaeb" TextColor="White" BorderRadius="0" FontSize="18" FontFamily="{StaticResource RegularFont}" ContentLayout="top,-18" Image="FoodItems.png" Text="Food and Consumers items"></Button>
+                        <Button Grid.Column="1" Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#318ce9" TextColor="White" BorderRadius="0" FontSize="18" FontFamily="{StaticResource RegularFont}" ContentLayout="top,-18" Image="EnvironmentAgriculture.png" Text="Environment and Agriculture"></Button>
+                        <Button Grid.Column="0" Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#51b3d8" TextColor="White" BorderRadius="0" FontSize="18" FontFamily="{StaticResource RegularFont}" ContentLayout="top,-18" Image="PestBirdsPets.png" Text="Pest, Birds and Pets"></Button>
+                        <Button Grid.Column="1" Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#61a2be" TextColor="White" BorderRadius="0" FontSize="18" FontFamily="{StaticResource RegularFont}" ContentLayout="top,-18" Image="more.png" Text="Faults and Other Complaints"></Button>
+                    </Grid>
+                </ScrollView>
+            </Grid>
+        </StackLayout>
+        
+    </ContentView>
+    <!--<ContentPage.Content  HorizontalOptions="Fill" VerticalOptions="Fill">
+        
+    </ContentPage.Content>-->
+</ContentPage>

@@ -22,11 +22,24 @@ namespace Dubie
                 SplashGrid.FadeTo(0, 2000),
                 Logo.ScaleTo(10, 2000)
                 );
+            SplashGrid.IsVisible = false;
         }
 
-        async void MyLocationButtonFunction(object sender, EventArgs e)
+        private async void MyLocationButtonFunction(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new MyLocationsPage());
+            await Navigation.PushModalAsync(new NavigationPage(new MyLocationsPage()));
+        }
+        private async void MyRequestsButtonFunction(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new MyRequestsPage());
+        }
+        private async void ServicesIncidentsButtonFunction(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new ServicesIncidentsPage()));
+        }
+        private async void MyProfileButtonFunction(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new MyProfilePage());
         }
     }
 }
